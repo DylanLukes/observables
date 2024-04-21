@@ -3,7 +3,7 @@ plugins {
 }
 
 group = "edu.ucsd.cse110"
-version = "1.0-SNAPSHOT"
+version = "1.0.0-alpha.1"
 
 repositories {
     mavenCentral()
