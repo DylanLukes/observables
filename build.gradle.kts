@@ -6,6 +6,13 @@ plugins {
 group = "io.github.dylanlukes"
 version = "1.0.0-alpha.4"
 
+java {
+    sourceCompatibility = JavaVersion.VERSION_17
+    targetCompatibility = JavaVersion.VERSION_17
+
+    withSourcesJar()
+}
+
 publishing {
     repositories {
         maven {
@@ -29,7 +36,10 @@ publishing {
     }
 
     publications {
-        register<MavenPublication>("gpr") {
+//        register<MavenPublication>("gpr") {
+//            from(components["java"])
+//        }
+        register<MavenPublication>("mavenJava") {
             from(components["java"])
         }
     }

@@ -22,7 +22,7 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Set up JDK 17 for GitHub Package Registry
+    - name: Set up JDK 17
       uses: actions/setup-java@v4
       with:
         java-version: '17'
@@ -36,7 +36,7 @@ jobs:
 
     # The USERNAME and TOKEN need to correspond to the credentials environment variables used in
     # the publishing section of your build.gradle
-    - name: Publish to GitHub Packages
+    - name: Publish
       run: ./gradlew publish
       env:
         GITHUB_ACTOR: ${{ github.actor }}

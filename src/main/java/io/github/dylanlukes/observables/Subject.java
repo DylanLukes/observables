@@ -7,6 +7,7 @@ import java.util.List;
 
 /**
  * A subject that can be observed by observers.
+ * @param <T> The type of the value that the subject holds.
  */
 public interface Subject<T> {
     /**

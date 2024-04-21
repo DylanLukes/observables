@@ -21,15 +21,16 @@ public interface MediatorSubject<T> extends MutableSubject<T> {
      * merged.registerObserver(v -> System.out.println("Merged: " + v));
      * source1.setValue("Hello");
      * source2.setValue("World");
-     *
+     * }</pre>
+     * <p>
      * // Outputs:
      * // Merged: Hello
      * // Merged: World
      *
-     * @param source The source subject to observe.
+     * @param source   The source subject to observe.
      * @param observer The observer to notify when the source subject changes.
+     * @param <S>      The type of the source subject.
      * @return The observer that was registered, so that it can be unregistered later.
-     * @param <S> The type of the source subject.
      */
     <S> Observer<? super S> registerSource(Subject<S> source, Observer<? super S> observer);
 

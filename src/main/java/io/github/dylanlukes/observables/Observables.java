@@ -15,8 +15,9 @@ public class Observables {
      * Creates a new {@link Subject}. For example:
      * <pre>{@code
      * MutableSubject<Integer> ints = Observables.createSubject();
-     * @param <T> The type of the subject's values.
+     * }</pre>
      * @return A new subject.
+     * @param <T> The type of the subject's values.
      */
     public static <T> MutableSubject<T> createSubject() {
         return new SubjectImpl<>();
@@ -102,8 +103,8 @@ public class Observables {
      * <p>
      * This allows for dynamic switching of the source Subject based on the values
      * emitted by the trigger Subject.
-     *
-     * @apiNote If you are into functional programming, this is vaguely similar to a flatMap.
+     * <p>
+     * If you are into functional programming, this is vaguely similar to a flatMap.
      *
      * @param trigger The subject that triggers the switch.
      * @param transformation A function to apply to each value set on source to create a new delegate LiveData for the returned one.
