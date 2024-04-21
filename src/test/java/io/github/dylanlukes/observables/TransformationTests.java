@@ -1,4 +1,4 @@
-package edu.ucsd.cse218.observables;
+package io.github.dylanlukes.observables;
 
 import org.junit.jupiter.api.Test;
 

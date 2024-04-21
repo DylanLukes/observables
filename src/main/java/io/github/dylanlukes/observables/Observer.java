@@ -1,4 +1,4 @@
-package edu.ucsd.cse218.observables;
+package io.github.dylanlukes.observables;
 
 public interface Observer<T> {
     void update(T value);

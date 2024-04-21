@@ -1,4 +1,4 @@
-package edu.ucsd.cse218.observables;
+package io.github.dylanlukes.observables;
 
 /**
  * A mutable subject that can be set to a new value.

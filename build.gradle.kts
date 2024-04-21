@@ -3,12 +3,20 @@ plugins {
     id("maven-publish")
 }
 
-group = "edu.ucsd.cse218"
-version = "1.0.0-alpha.2"
+group = "io.github.dylanlukes"
+version = "1.0.0-alpha.3"
 
-// Publishing to GitHub Packages registry
 publishing {
     repositories {
+        maven {
+            name = "OSSRH"
+            url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+            credentials {
+                username = System.getenv("MAVEN_USERNAME")
+                password = System.getenv("MAVEN_PASSWORD")
+            }
+        }
+
         maven {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/DylanLukes/observables")
