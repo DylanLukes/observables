@@ -1,9 +1,31 @@
 plugins {
-    id("java")
+    id("java-library")
+    id("maven-publish")
 }
 
-group = "edu.ucsd.cse110"
+group = "edu.ucsd.cse218"
 version = "1.0.0-alpha.1"
+
+// Publishing to GitHub Packages registry
+publishing {
+    repositories {
+        maven {
+            name = "GitHubPackages"
+            url = uri("https://maven.pkg.github.com/DylanLukes/observables")
+            credentials {
+                username = (project.findProperty("gpr.user") as String?) ?: System.getenv("USERNAME")
+                password = (project.findProperty("gpr.key") as String?) ?: System.getenv("TOKEN")
+            }
+
+        }
+    }
+
+    publications {
+        register<MavenPublication>("gpr") {
+            from(components["java"])
+        }
+    }
+}
 
 repositories {
     mavenCentral()
