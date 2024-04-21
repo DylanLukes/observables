@@ -1,4 +1,4 @@
-package edu.ucsd.cse110.observables;
+package edu.ucsd.cse218.observables;
 
 import java.lang.Number;
 import java.util.concurrent.atomic.AtomicBoolean;

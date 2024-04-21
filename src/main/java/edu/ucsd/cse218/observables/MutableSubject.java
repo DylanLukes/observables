@@ -1,4 +1,4 @@
-package edu.ucsd.cse110.observables;
+package edu.ucsd.cse218.observables;
 
 /**
  * A mutable subject that can be set to a new value.
