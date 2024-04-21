@@ -4,7 +4,7 @@ plugins {
 }
 
 group = "io.github.dylanlukes"
-version = "1.0.0-alpha.3"
+version = "1.0.0-alpha.4"
 
 publishing {
     repositories {
@@ -21,8 +21,8 @@ publishing {
             name = "GitHubPackages"
             url = uri("https://maven.pkg.github.com/DylanLukes/observables")
             credentials {
-                username = (project.findProperty("gpr.user") as String?) ?: System.getenv("USERNAME")
-                password = (project.findProperty("gpr.key") as String?) ?: System.getenv("TOKEN")
+                username = (project.findProperty("gpr.user") as String?) ?: System.getenv("GITHUB_ACTOR")
+                password = (project.findProperty("gpr.key") as String?) ?: System.getenv("GITHUB_TOKEN")
             }
 
         }
